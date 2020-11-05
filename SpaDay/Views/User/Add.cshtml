@@ -1,6 +1,10 @@
-﻿<form method="post" action="/user/add">
-    <label>Username: <input type="text" name="aUser.Username" /></label>
-    <label>Email: <input type="email" name="aUser.Email" /></label>
+﻿@if(ViewBag.error != null)
+{
+    <p>@ViewBag.error</p>
+}
+<form method="post" action="/user/add">
+    <label>Username: <input type="text" name="aUser.Username" value="@ViewBag.username" /></label>
+    <label>Email: <input type="email" name="aUser.Email" value="@ViewBag.email"/></label>
     <label>Password: <input type="password" name="aUser.Password" /></label>
     <label>Verify Password: <input type="password" name="passwordCheck" /></label>
     <input type="submit" value="Add User" />
