@@ -1,6 +1,7 @@
-﻿<form method="post" action="/events/user">
-    <input type="text" name="aUser.Username"/>
-    <input type="email" name="aUser.Email" />
-    <input type="password" name="aUser.Password" />
-    <input type="password" name="passwordCheck" />
+﻿<form method="post" action="/user/add">
+    <label>Username: <input type="text" name="aUser.Username" /></label>
+    <label>Email: <input type="email" name="aUser.Email" /></label>
+    <label>Password: <input type="password" name="aUser.Password" /></label>
+    <label>Verify Password: <input type="password" name="passwordCheck" /></label>
+    <input type="submit" value="Add User" />
 </form>

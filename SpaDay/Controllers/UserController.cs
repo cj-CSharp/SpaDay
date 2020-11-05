@@ -17,11 +17,13 @@ namespace SpaDay.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [Route("user/add")]
         public IActionResult SubmitAddUserForm(User aUser, string passwordCheck)
         {
             if(aUser.Password == passwordCheck)
             {
-                ViewBag.user = aUser;
+                ViewBag.currentUser = aUser;
                 return View("Index");
             }
             return View("Add");
